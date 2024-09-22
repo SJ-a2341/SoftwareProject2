@@ -6,19 +6,19 @@ void setup() {
   while(!Serial) {
     ;
   }
-  toggle = 0;
+  toggle = 1;
   digitalWrite(PIN_LED, toggle);
 }
 
 void loop() {
+  for( int i = 0; i< 5; i++) {
+    digitalWrite(PIN_LED, 1);
+    delay(100);
+    
+    
+    digitalWrite(PIN_LED, 0);
+    delay(100);
+  }
   
-  toggle = toggle_state(toggle);
-  digitalWrite(PIN_LED, toggle);
-  delay(200);
-
-}
-
-int toggle_state(int toggle) {
-  
-  return (toggle+1)%2;
+ 
 }
