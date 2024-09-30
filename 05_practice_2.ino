@@ -19,6 +19,10 @@ void loop() {
     digitalWrite(PIN_LED, 0);
     delay(100);
   }
-  
+  digitalWrite(PIN_LED,0);
+
+  while(1) {
+    ;
+  }
  
 }
